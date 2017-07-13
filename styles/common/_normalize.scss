@@ -1,0 +1,24 @@
+* {
+	@include box-sizing;
+	@include text-size-adjust;
+	&:focus { outline: none; }
+}
+
+html {
+	background: $html-background;
+	color: white;
+	font: normal 10px/1.42857 $html-font;
+}
+
+body {
+	background: none;
+	color: inherit;
+	font: inherit;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover { opacity: 0.8; }
+}

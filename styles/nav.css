@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-/* variables */
-/* resets and base styles */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -109,4 +107,4 @@ a {
     margin: 0;
     padding: 0; }
 
-/*# sourceMappingURL=hamburger-menu.css.map */
+/*# sourceMappingURL=nav.css.map */

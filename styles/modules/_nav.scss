@@ -1,34 +1,3 @@
-@import 'abstracts/mixins';
-@import 'base/colors';
-@import 'base/fonts';
-
-/* variables */
-$html-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$nav-toggle-bar-color: white;
-$nav-toggle-bar-height: 0.4rem;
-$nav-toggle-bar-width: 3.6rem;
-$nav-background: $aqua;
-$nav-color: white;
-$nav-width: 20rem;
-$z-nav-toggle: 2;
-$z-nav: 1;
-
-/* resets and base styles */
-* {
-	@include box-sizing;
-	@include text-size-adjust;
-	&:focus { outline: none; }
-}
-
-html { background: $plum; color: white; font: normal 10px/1.42857 $html-font; }
-body { background: none; color: inherit; font: inherit; }
-a {
-	color: inherit;
-	cursor: pointer;
-	text-decoration: none;
-	&:hover { opacity: 0.8; }
-}
-
 /* nav toggle */
 .nav-toggle {
 	@include user-select;
