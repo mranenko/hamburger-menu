@@ -1,0 +1,39 @@
+@mixin box-sizing($box-sizing: border-box) {
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing: $box-sizing;
+	box-sizing: $box-sizing;
+}
+
+@mixin center-vertically($position: absolute) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin text-size-adjust {
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+@mixin transform($transform) {
+	-ms-transform: $transform;
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transition($parameters: all 0.5s ease) {
+	-webkit-transition: $parameters;
+	-moz-transition: $parameters;
+	-ms-transition: $parameters;
+	-o-transition: $parameters;
+	transition: $parameters;
+}
+
+@mixin user-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
