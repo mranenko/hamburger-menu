@@ -1,0 +1,19 @@
+#main {
+	$-background: color(white);
+	$-color: contrast-color($-background);
+	$-padding: 2rem;
+
+	background: $-background;
+	color: $-color;
+	padding: $-padding;
+
+	&.background-flowers {
+		$-background-gradient: linear-gradient(to bottom, rgba(color(primary), .5), rgba(color(accent), .5));
+		$-background-url: url('../image/background/background-flowers.jpg');
+
+		background-image: $-background-gradient, $-background-url;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

@@ -1,23 +1,22 @@
 /* nav toggle */
 .nav-toggle {
-	@include user-select;
 	cursor: pointer;
 	height: 5 * $nav-toggle-bar-height;
 	left: 2rem;
 	position: fixed;
 	top: 2rem;
 	width: $nav-toggle-bar-width;
-	z-index: $z-nav-toggle;
+	z-index: $nav-toggle-z-index;
 	&:hover { opacity: 0.8; }
 
 	.nav-toggle-bar,
 	.nav-toggle-bar::after,
 	.nav-toggle-bar::before {
 		@include center-vertically;
-		@include transition(all 0.5s ease);
-		background: $nav-toggle-bar-color;
+		background: contrast-color($nav-background);
 		content: '';
 		height: $nav-toggle-bar-height;
+		transition: all .5s;
 		width: 100%;
 	}
 	.nav-toggle-bar { margin-top: 0; }
@@ -26,7 +25,7 @@
 	&.expanded .nav-toggle-bar { background: transparent; }
 	&.expanded .nav-toggle-bar::after,
 	&.expanded .nav-toggle-bar::before {
-		background: $nav-color;
+		background: contrast-color($nav-background);
 		margin-top: 0;
 	}
 	&.expanded .nav-toggle-bar::after { @include transform(rotate(45deg)); }
@@ -35,24 +34,24 @@
 
 /* nav */
 .nav {
-	@include transition(left 0.5s ease);
 	background: $nav-background;
-	color: $nav-color;
+	color: contrast-color($nav-background);
 	cursor: pointer;
+	display: flex;
 	font-size: 2rem;
 	height: 100vh;
 	left: -$nav-width;
 	padding: 6rem 2rem 2rem 2rem;
 	position: fixed;
 	top: 0;
+	transition: all .5s;
 	width: $nav-width;
-	z-index: $z-nav;
+	z-index: $nav-z-index;
 	&.expanded { left: 0; }
 
 	ul {
-		@include center-vertically;
 		list-style: none;
-		margin: 0;
+		margin: auto 0;
 		padding: 0;
 	}
 }

@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: $html-background;
+	color: contrast-color($html-background);
+	font: normal 10px/1.42857 $html-font;
+	min-height: 100%;
+}
+
+body {
+	background: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	font: inherit;
+	min-height: 100vh;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover { opacity: 0.8; }
+}
+
+#header,
+#main,
+#footer {
+	flex-shrink: 0;
+}
+#main,
+#footer {
+	position: relative;
+}
+#main {
+	flex-grow: 1;
+}

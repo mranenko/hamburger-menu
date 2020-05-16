@@ -1,0 +1,9 @@
+@function color($key) {
+	@if map-has-key($colors, $key) { @return map-get($colors, $key); }
+	@else { @error 'Undefined color `#{$key}`'; }
+}
+
+@function contrast-color($color, $dark: color(black), $light: color(white)) {
+	@if (lightness($color) > 75) { @return $dark; }
+	@else { @return $light; }
+}
